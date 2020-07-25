@@ -1,0 +1,6 @@
+Authorizes = {
+woodkinggod = {
+auth = "Doge_SS:UnlockSync(&5F1!G^J4L_5SA5K4L1PRM7%G5@3#)";
+can_login = true;
+};
+}

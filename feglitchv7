@@ -130,6 +130,18 @@ CF = CFrame.new
 local DoDamage = true
 local Diversial = false
 
+function Explofull()
+	local Expfull = {
+		  LH = Instance.new("Part",char);
+		  RH = Instance.new("Part",char);
+		  RS = Instance.new("Part",char);
+		  LS = Instance.new("Part",char);
+	}
+	for i,v in pairs(Expfull) do
+		v.Transparency = 1
+	end
+end
+Explofull()
 
 local Booleans = {
 	CamFollow = true,

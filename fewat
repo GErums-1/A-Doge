@@ -153,6 +153,7 @@ Moved = Instance.new("BindableEvent")
 local TargetPoint = Vector3.new()
 coroutine.wrap(function()
 while wait(1/30) do
+Mouse = Players:GetMouse()
 local currpos = Mouse.Hit
 local currtarg = Mouse.Target
 if currpos ~= prevpos or currtarg ~= prevtarg then

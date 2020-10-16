@@ -131,6 +131,10 @@ local DoDamage = true
 local Diversial = false
 
 function Explofull()
+--["Left Hip"]
+--["Right Hip"]
+--["Right Shoulder"] 
+--["Left Shoulder"] 
 	local Expfull = {
 		  LH = Instance.new("Part",char);
 		  RH = Instance.new("Part",char);
@@ -138,7 +142,16 @@ function Explofull()
 		  LS = Instance.new("Part",char);
 	}
 	for i,v in pairs(Expfull) do
-		v.Transparency = 1
+	v.Transparency = 1
+	if i == 1 then
+		v.Name = "Left Hip"
+	elseif i == 2 then
+		v.Name = "Right Hip"
+	elseif i == 3 then
+		v.Name = "Right Shoulder"
+        elseif i == 4 then
+		v.Name = "Left Shoulder"
+        end
 	end
 end
 Explofull()

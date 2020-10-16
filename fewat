@@ -816,18 +816,20 @@ end
 --||	  ASSIGN THINGS TO KEYS
 --\\=================================//
 
-mousedownevent.OnServerEvent:Connect(function()
+Player:GetMouse().Button1Down:Connect(function()
 	HOLD = true
 	if ATTACK == false then
 		Rapid()
 	end
 end
 )
-mouseupevent.OnServerEvent:Connect(function()
+
+Player:GetMouse().Button1Up:Connect(function()
 HOLD = false
 end)
 
-keydownevent.OnServerEvent:Connect(function(ply,k)
+
+Player:GetMouse().KeyDown:Connect(function(ply,k)
 k = k:lower()
 	KEYHOLD = true
 	if k == "c" and ATTACK == false then
@@ -847,7 +849,7 @@ k = k:lower()
 	end
 end
 )
-keyupevent.OnServerEvent:Connect(function()
+Player:GetMouse().KeyUp:Connect(function()
 	KEYHOLD = false
 end)
 

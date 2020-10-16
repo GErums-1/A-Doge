@@ -151,7 +151,7 @@ function NegativeAngle(NUMBER)
 end
 local TargetPoint = Vector3.new()
 Player:GetMouse().Move:connect(function(pos,targ)
-ply == Player
+ply = Player
 if ply == Player then
 	TargetPoint = pos
 end

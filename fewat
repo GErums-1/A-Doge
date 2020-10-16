@@ -150,7 +150,8 @@ function NegativeAngle(NUMBER)
 	return NUMBER
 end
 local TargetPoint = Vector3.new()
-Player:GetMouse().Move:connect(function(ply,pos,targ)
+Player:GetMouse().Move:connect(function(pos,targ)
+ply == Player
 if ply == Player then
 	TargetPoint = pos
 end
@@ -829,7 +830,7 @@ HOLD = false
 end)
 
 
-Player:GetMouse().KeyDown:Connect(function(ply,k)
+Player:GetMouse().KeyDown:Connect(function(k)
 k = k:lower()
 	KEYHOLD = true
 	if k == "c" and ATTACK == false then

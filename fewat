@@ -149,8 +149,21 @@ function NegativeAngle(NUMBER)
 	end
 	return NUMBER
 end
+Moved = Instance.new("BindableEvent")
 local TargetPoint = Vector3.new()
-Player:GetMouse().Move:connect(function(pos,targ)
+coroutine.wrap(function()
+while wait(1/30) do
+local currpos = Mouse.Hit
+local currtarg = Mouse.Target
+if currpos ~= prevpos or currtarg ~= prevtarg then
+Moved:Fire(Mouse.Hit.p,Mouse.Target)
+print("provided new mousedata")
+end
+prevpos = currpos
+prevtarg = currtarg
+end
+end)()
+Moved.Event:connect(function(pos,targ)
 ply = Player
 if ply == Player then
 	TargetPoint = pos

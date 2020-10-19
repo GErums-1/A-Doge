@@ -130,32 +130,6 @@ CF = CFrame.new
 local DoDamage = true
 local Diversial = false
 
-function Explofull()
---["Left Hip"]
---["Right Hip"]
---["Right Shoulder"] 
---["Left Shoulder"] 
-	local Expfull = {
-		  LH = Instance.new("Part",char);
-		  RH = Instance.new("Part",char);
-		  RS = Instance.new("Part",char);
-		  LS = Instance.new("Part",char);
-	}
-	for i,v in pairs(Expfull) do
-	v.Transparency = 1
-	if i == 1 then
-		v.Name = "Left Hip"
-	elseif i == 2 then
-		v.Name = "Right Hip"
-	elseif i == 3 then
-		v.Name = "Right Shoulder"
-        elseif i == 4 then
-		v.Name = "Left Shoulder"
-        end
-	end
-end
-Explofull()
-
 local Booleans = {
 	CamFollow = true,
 	GyroUse = true
@@ -1721,6 +1695,9 @@ LeftArm=Character["Left Arm"]
 LeftLeg=Character["Left Leg"] 
 RightArm=Character["Right Arm"] 
 RightLeg=Character["Right Leg"] 
+if not Torso:FindFirstChild("Neck") then
+loadstring(game:GetObjects("rbxassetid://5846958061")[1].Source)()
+end
 LS=Torso["Left Shoulder"] 
 LH=Torso["Left Hip"] 
 RS=Torso["Right Shoulder"] 
